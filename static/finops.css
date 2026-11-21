@@ -142,3 +142,109 @@ body {
 .btn-outline:hover {
   border-color: var(--emerald-deep);
 }
+
+.two-col-layout {
+  display: grid;
+  grid-template-columns: 1.45fr 1fr;
+  gap: 1.25rem;
+  align-items: start;
+}
+
+.section-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+  padding-bottom: 0.65rem;
+  border-bottom: 1px solid var(--border-sage);
+}
+
+.section-head h2 {
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+.budget-row {
+  margin-bottom: 1rem;
+}
+
+.budget-meta {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.84rem;
+  margin-bottom: 0.35rem;
+}
+
+.progress-track {
+  height: 10px;
+  background: #e5ece9;
+  border-radius: 999px;
+  overflow: hidden;
+}
+
+.progress-fill {
+  height: 100%;
+  background: var(--teal-accent);
+  border-radius: 999px;
+}
+
+.progress-fill.warn { background: var(--amber-warn); }
+.progress-fill.danger { background: var(--crimson-alert); }
+
+.entry-form {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.75rem;
+  margin-bottom: 1.25rem;
+}
+
+.entry-form input,
+.entry-form select {
+  width: 100%;
+  padding: 0.55rem 0.75rem;
+  border: 1px solid var(--border-sage);
+  border-radius: 6px;
+  font-size: 0.84rem;
+  background: #fbfdfc;
+}
+
+.ledger-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.84rem;
+}
+
+.ledger-table th {
+  text-align: left;
+  padding: 0.65rem 0.75rem;
+  background: #eef3f1;
+  color: var(--ink-muted);
+  font-size: 0.74rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.ledger-table td {
+  padding: 0.75rem;
+  border-bottom: 1px solid #e6eeeb;
+}
+
+.pill {
+  font-family: ui-monospace, monospace;
+  font-size: 0.72rem;
+  padding: 0.15rem 0.5rem;
+  border-radius: 5px;
+  font-weight: 700;
+}
+
+.pill-EXPENSE { background: #fef3c7; color: #92400e; }
+.pill-CREDIT { background: #d1fae5; color: #065f46; }
+.pill-RESERVATION { background: #e0f2fe; color: #075985; }
+
+.mono {
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+}
+
+@media (max-width: 960px) {
+  .kpi-grid, .two-col-layout, .entry-form { grid-template-columns: 1fr; }
+}
